@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+  <head>
+
+    <meta charset="utf-8">
+    <title>Beanie's Bops</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+
+      #map {
+        height: 500px;
+        width: 100%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <img src="images/beaniebops.png" class="center" width="200" height="275" alt="Bean with a hat on">
+
+    <h1>Beanie's Bops</h1>
+
+    <hr>
+
+    <div class="topnav">
+      <a class="active" href="index.html">About Me</a>
+      <a href="artists.html">Artists</a>
+      <a href="songs.html">Songs</a>
+      <a href="genres.html">Genres</a>
+    </div>
+
+    <hr>
+
+    <h2>About Kelsey</h2>
+
+    <img src="images/kelsey.jpg" width="200" height="300" alt="Kelsey in front of a sunset">
+
+    <p>My name is Kelsey McMenemy and I'm a sophomore
+    majoring in Marine Biology. I'm originally from Cincinatti, Ohio
+    but now am attending the University of Rhode Island. This website
+    was designed to share my favorite music artists, songs and genres
+    with lots of different people. </p>
+
+    <h2>Kelsey's Music Bio</h2>
+
+    <p>I am typically into heavy metal genres of music. While sometimes I do
+    have a diverse taste this is typically what I stick to. If you click
+    through out the site you'll see my favorite artists, songs, and genres.
+    As well as stories of how I came to like those artists and why I like
+    specific songs.</p>
+
+
+    <p>Created by: Ellie Oswald</p>
+    <a href = "mailto: ellie_oswald@uri.edu">ellie_oswald@uri.edu</a>
+
+
+    <div id="map"></div>
+
+    <script>
+      function initMap() {
+        var location = {lat: 41.491, lng: -71.421};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: location
+        });
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+      }
+    </script>
+
+    <script async defer src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAT0nWB1LTY-Oc99XYaHWF4x03-j0yTL0c&callback=initMap'></script>
+
+  </body>
+
+</html>
